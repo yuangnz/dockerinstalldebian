@@ -1,5 +1,5 @@
 #!/bin/bash
-
+rm -f /etc/apt/sources.list.d/docker.sources /etc/apt/keyrings/docker.gpg /etc/apt/keyrings/docker.asc /etc/apt/sources.list.d/docker.list && apt update
 apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common sudo
 
 curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg | sudo apt-key add -
